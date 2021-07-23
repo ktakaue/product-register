@@ -7,6 +7,6 @@ before_install:
 
 
 script:
--docker-copose exec --env 'RAILS_ENV=test' web rails db:create
--docker-copose exec --env 'RAILS_ENV=test' web rails db:migrate
--docker-copose exec --env 'RAILS_ENV=test' web rails test
+    -docker-copose exec --env 'RAILS_ENV=test' web rails db:create
+    -docker-copose exec --env 'RAILS_ENV=test' web rails db:migrate
+    -docker-copose exec --env 'RAILS_ENV=test' web rails test
